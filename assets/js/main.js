@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // Add staggered animation delay to cards
-    const cards = document.querySelectorAll('.social-card');
-    cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.animation = `slideIn 0.5s ease-out forwards ${index * 0.1 + 0.5}s`;
+    // Add staggered animation delay to all cards and sections
+    const animateElements = document.querySelectorAll('.social-card, .section-title, .project-card, .contact-section');
+    animateElements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.animation = `slideIn 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards ${index * 0.1 + 0.3}s`;
     });
 });
 
